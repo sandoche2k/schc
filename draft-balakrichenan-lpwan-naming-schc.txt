@@ -2,7 +2,7 @@
 
 
 
-LPWAN                                              S. Balakrichenan, Ed.
+lpwan                                              S. Balakrichenan, Ed.
 Internet-Draft                                                     AFNIC
 Intended status: Experimental                         S. Sivalingam, Ed.
 Expires: May 10, 2019                                             Acklio
@@ -10,7 +10,7 @@ Expires: May 10, 2019                                             Acklio
 
 
                             Naming for SCHC
-                 draft-balakrichenan-lpwan-naming-schc
+                draft-balakrichenan-lpwan-naming-schc-00
 
 Abstract
 
@@ -67,12 +67,15 @@ Table of Contents
    5.  Operational Considerations  . . . . . . . . . . . . . . . . .   2
    6.  IANA Considerations . . . . . . . . . . . . . . . . . . . . .   2
    7.  Acknowledgements  . . . . . . . . . . . . . . . . . . . . . .   2
-   8.  References  . . . . . . . . . . . . . . . . . . . . . . . . .   2
-     8.1.  Normative References  . . . . . . . . . . . . . . . . . .   2
-     8.2.  Informative References  . . . . . . . . . . . . . . . . .   3
-   Authors' Addresses  . . . . . . . . . . . . . . . . . . . . . . .   3
+   8.  Normative References  . . . . . . . . . . . . . . . . . . . .   2
+   Authors' Addresses  . . . . . . . . . . . . . . . . . . . . . . .   2
 
 1.  Introduction
+
+   [RFC8376]  states that the goal of the LPWAN WG is to, where
+   necessary, adapt IETF-defined protocols, addressing schemes, and
+   naming conventions to this particular constrained environment.  This
+   draft is intended for the naming part.
 
 2.  Terminology
 
@@ -86,24 +89,21 @@ Table of Contents
 
 7.  Acknowledgements
 
-8.  References
+8.  Normative References
 
-8.1.  Normative References
+   [RFC8376]  Farrell, S., Ed., "Low-Power Wide Area Network (LPWAN)
+              Overview", RFC 8376, DOI 10.17487/RFC8376, May 2018,
+              <https://www.rfc-editor.org/info/rfc8376>.
 
-   [IANA-ENTERPRISE]
-              IANA, "SMI Network Management Private Enterprise Codes
-              Registry", <https://www.iana.org/assignments/enterprise-
-              numbers/enterprise-numbers>.
+Authors' Addresses
 
-   [RFC1035]  Mockapetris, P., "Domain names - implementation and
-              specification", STD 13, RFC 1035, DOI 10.17487/RFC1035,
-              November 1987, <https://www.rfc-editor.org/info/rfc1035>.
+   Sandoche Balakrichenan (editor)
+   AFNIC
+   2 Rue Stephenson
+   Montigny le Bretonneux  78181
+   FR
 
-   [RFC2119]  Bradner, S., "Key words for use in RFCs to Indicate
-              Requirement Levels", BCP 14, RFC 2119,
-              DOI 10.17487/RFC2119, March 1997, <https://www.rfc-
-              editor.org/info/rfc2119>.
-
+   Email: sandoche.balakrichenan@afnic.fr
 
 
 
@@ -114,44 +114,44 @@ Balakrichenan & SivalingamExpires May 10, 2019                  [Page 2]
 Internet-Draft               Naming for SCHC               November 2018
 
 
-   [RFC4648]  Josefsson, S., "The Base16, Base32, and Base64 Data
-              Encodings", RFC 4648, DOI 10.17487/RFC4648, October 2006,
-              <https://www.rfc-editor.org/info/rfc4648>.
-
-   [RFC6838]  Freed, N., Klensin, J., and T. Hansen, "Media Type
-              Specifications and Registration Procedures", BCP 13,
-              RFC 6838, DOI 10.17487/RFC6838, January 2013,
-              <https://www.rfc-editor.org/info/rfc6838>.
-
-   [RFC8174]  Leiba, B., "Ambiguity of Uppercase vs Lowercase in RFC
-              2119 Key Words", BCP 14, RFC 8174, DOI 10.17487/RFC8174,
-              May 2017, <https://www.rfc-editor.org/info/rfc8174>.
-
-8.2.  Informative References
-
-   [ITU-X.1255]
-              ITU, "Framework for discovery of identity management
-              information, n.d.", <https://www.iana.org/assignments/
-              enterprise-numbers/enterprise-numbers>.
-
-   [RFC3650]  Sun, S., Lannom, L., and B. Boesch, "Handle System
-              Overview", RFC 3650, DOI 10.17487/RFC3650, November 2003,
-              <https://www.rfc-editor.org/info/rfc3650>.
-
-Authors' Addresses
-
-   Sandoche Balakrichenan (editor)
-   AFNIC
-   2 Rue Stephenson
-   Montigny le Bretonneux  78181
-   USA
-
-   Email: Alain.Durand@icann.org
-
-
    Sothy (editor)
    Acklio
    t
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

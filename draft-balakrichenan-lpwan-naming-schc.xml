@@ -57,7 +57,7 @@
 
 <middle>
    <section title="Introduction">
-     <t> <xref target="RFC8376"></xref> states that the goal of
+     <t> <xref target="RFC8376"/>  states that the goal of
    the LPWAN WG is to, where necessary, adapt IETF-defined protocols,
    addressing schemes, and naming conventions to this particular
    constrained environment.
@@ -90,31 +90,9 @@
 
 <back>
 <references title="Normative References">
-    <reference anchor="IANA-ENTERPRISE" target="https://www.iana.org/assignments/enterprise-numbers/enterprise-numbers">
-        <front>
-          <title>SMI Network Management Private Enterprise Codes
-              Registry</title>
-          <author><organization> IANA </organization></author>
-          <date month="" year="" />
-        </front>
-      </reference>
-   <?rfc include='reference.RFC.1035'?>
-   <?rfc include='reference.RFC.2119'?>
-   <?rfc include='reference.RFC.4648'?>
-   <?rfc include='reference.RFC.6838'?>
-   <?rfc include='reference.RFC.8174'?>
+   <?rfc include='reference.RFC.8376'?>
 </references>
 
-<references title="Informative References">
-  <reference anchor="ITU-X.1255" target="https://www.iana.org/assignments/enterprise-numbers/enterprise-numbers">
-      <front>
-        <title>Framework for discovery of identity management
-              information, n.d.</title>
-        <author><organization> ITU </organization></author>
-        <date month="" year="" />
-      </front>
-    </reference>
-    <?rfc include='reference.RFC.3650'?>
-</references>
+
 </back>
 </rfc>
