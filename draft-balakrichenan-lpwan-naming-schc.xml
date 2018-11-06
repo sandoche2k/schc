@@ -1,0 +1,122 @@
+<?xml version="1.0"?>
+<!DOCTYPE rfc SYSTEM "rfc2629.dtd" [
+<!ENTITY I-D.draft-durand-doa-over-dns-03 SYSTEM "http://xml.resource.org/public/rfc/bibxml3/reference.I-D.draft-balakrichenan-lpwan-naming-schc">
+<!ENTITY rfc2119 SYSTEM "http://xml.resource.org/public/rfc/bibxml/reference.RFC.2119.xml">
+<!ENTITY rfc2223 SYSTEM "http://xml.resource.org/public/rfc/bibxml/reference.RFC.2223.xml">
+<!ENTITY rfc2578 SYSTEM "http://xml.resource.org/public/rfc/bibxml/reference.RFC.2578.xml">
+<!ENTITY rfc2579 SYSTEM "http://xml.resource.org/public/rfc/bibxml/reference.RFC.2579.xml">
+<!ENTITY rfc2580 SYSTEM "http://xml.resource.org/public/rfc/bibxml/reference.RFC.2580.xml">
+<!ENTITY rfc2629 SYSTEM "http://xml.resource.org/public/rfc/bibxml/reference.RFC.2629.xml">
+<!ENTITY rfc3410 SYSTEM "http://xml.resource.org/public/rfc/bibxml/reference.RFC.3410.xml">
+<!ENTITY rfc4181 SYSTEM "http://xml.resource.org/public/rfc/bibxml/reference.RFC.4181.xml">
+]>
+<?rfc toc="yes"?>
+<?rfc comments="yes"?>
+<?rfc inline="yes" ?>
+<rfc category="exp" ipr="trust200902" docName="draft-balakrichenan-lpwan-naming-schc">
+<front>
+   <title abbrev="Naming for SCHC">
+     Naming for SCHC 
+   </title>
+
+   <author role="editor" fullname="Sandoche Balakrichenan" initials="S." surname="Balakrichenan">
+     <organization>AFNIC</organization>
+     <address>
+       <postal>
+         <street>2 Rue Stephenson</street>
+         <city>Montigny le Bretonneux</city>
+         <region></region>
+         <code>78181</code>
+         <country>USA</country>
+       </postal>
+       <phone></phone>
+       <email>Alain.Durand@icann.org</email>
+     </address>
+   </author>
+
+   <author role="editor" fullname="Sothy" initials="S." surname="Sivalingam">
+     <organization>Acklio</organization>
+     <address>
+       <postal>
+         <street>t</street>
+         <city></city>
+         <region></region>
+         <code></code>
+         <country></country>
+       </postal>
+       <phone></phone>
+       <email></email>
+     </address>
+   </author>
+
+   <date year="2018" />
+   <area></area>
+   <workgroup>LPWAN</workgroup>
+   <keyword>Draft</keyword>
+
+   <abstract>
+     <t>
+       This document describes how a DNS label could be send using SCHC
+       SCHC for DNS.
+     </t>
+   </abstract>
+</front>
+
+<middle>
+   <section title="Introduction">
+     <t>
+     </t>
+   </section>
+
+   <section title="Terminology">
+     <t> </t> 
+   </section>
+
+
+  <section title="Security Considerations">
+  </section>
+
+  <section title="Privacy  Considerations">
+  </section>
+
+  <section title="Operational Considerations">
+  </section>
+
+  <section title="IANA Considerations">
+   </section>
+
+    <section title="Acknowledgements">
+
+    </section>
+  </middle>
+
+<back>
+<references title="Normative References">
+    <reference anchor="IANA-ENTERPRISE" target="https://www.iana.org/assignments/enterprise-numbers/enterprise-numbers">
+        <front>
+          <title>SMI Network Management Private Enterprise Codes
+              Registry</title>
+          <author><organization> IANA </organization></author>
+          <date month="" year="" />
+        </front>
+      </reference>
+   <?rfc include='reference.RFC.1035'?>
+   <?rfc include='reference.RFC.2119'?>
+   <?rfc include='reference.RFC.4648'?>
+   <?rfc include='reference.RFC.6838'?>
+   <?rfc include='reference.RFC.8174'?>
+</references>
+
+<references title="Informative References">
+  <reference anchor="ITU-X.1255" target="https://www.iana.org/assignments/enterprise-numbers/enterprise-numbers">
+      <front>
+        <title>Framework for discovery of identity management
+              information, n.d.</title>
+        <author><organization> ITU </organization></author>
+        <date month="" year="" />
+      </front>
+    </reference>
+    <?rfc include='reference.RFC.3650'?>
+</references>
+</back>
+</rfc>
