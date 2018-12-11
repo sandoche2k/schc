@@ -4,18 +4,16 @@
 
 lpwan                                              S. Balakrichenan, Ed.
 Internet-Draft                                                     AFNIC
-Intended status: Experimental                         S. Sivalingam, Ed.
-Expires: May 10, 2019                                             Acklio
-                                                        November 6, 2018
+Intended status: Experimental                          December 11, 2018
+Expires: June 14, 2019
 
 
-                            Naming for SCHC
+                           DNS usage in LPWAN
                 draft-balakrichenan-lpwan-naming-schc-00
 
 Abstract
 
-   This document describes how a DNS label could be send using SCHC SCHC
-   for DNS.
+   This document describes DNS usage in LPWAN.
 
 Status of This Memo
 
@@ -32,7 +30,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on May 10, 2019.
+   This Internet-Draft will expire on June 14, 2019.
 
 Copyright Notice
 
@@ -53,49 +51,100 @@ Copyright Notice
 
 
 
-Balakrichenan & SivalingamExpires May 10, 2019                  [Page 1]
+
+
+Balakrichenan             Expires June 14, 2019                 [Page 1]
 
-Internet-Draft               Naming for SCHC               November 2018
+Internet-Draft             DNS usage in LPWAN              December 2018
 
 
 Table of Contents
 
    1.  Introduction  . . . . . . . . . . . . . . . . . . . . . . . .   2
-   2.  Terminology . . . . . . . . . . . . . . . . . . . . . . . . .   2
-   3.  Security Considerations . . . . . . . . . . . . . . . . . . .   2
-   4.  Privacy  Considerations . . . . . . . . . . . . . . . . . . .   2
-   5.  Operational Considerations  . . . . . . . . . . . . . . . . .   2
-   6.  IANA Considerations . . . . . . . . . . . . . . . . . . . . .   2
-   7.  Acknowledgements  . . . . . . . . . . . . . . . . . . . . . .   2
-   8.  Normative References  . . . . . . . . . . . . . . . . . . . .   2
-   Authors' Addresses  . . . . . . . . . . . . . . . . . . . . . . .   2
+   2.  Motivation  . . . . . . . . . . . . . . . . . . . . . . . . .   2
+   3.  Terminology . . . . . . . . . . . . . . . . . . . . . . . . .   2
+   4.  IPv6 address fields . . . . . . . . . . . . . . . . . . . . .   2
+   5.  Different types of Interface Identifiers (IID)  . . . . . . .   3
+   6.  Security Considerations . . . . . . . . . . . . . . . . . . .   3
+   7.  Privacy  Considerations . . . . . . . . . . . . . . . . . . .   3
+   8.  Operational Considerations  . . . . . . . . . . . . . . . . .   3
+   9.  IANA Considerations . . . . . . . . . . . . . . . . . . . . .   3
+   10. Acknowledgements  . . . . . . . . . . . . . . . . . . . . . .   3
+   11. Normative References  . . . . . . . . . . . . . . . . . . . .   3
+   Author's Address  . . . . . . . . . . . . . . . . . . . . . . . .   3
 
 1.  Introduction
 
    [RFC8376]  states that the goal of the LPWAN WG is to, where
    necessary, adapt IETF-defined protocols, addressing schemes, and
-   naming conventions to this particular constrained environment.  This
-   draft is intended for the naming part.
+   naming conventions to this particular constrained environment.
 
-2.  Terminology
+   [RFC0830]  specifies that realization of Internet Naming Convention
+   requires the establishment of both naming authority and name service.
 
-3.  Security Considerations
+   This document describes how the Internet naming convention, i.e. the
+   domain names and the Internet naming authority and service, i.e. the
+   DNS could be use in LPWAN constrained scenarios.
 
-4.  Privacy Considerations
+2.  Motivation
 
-5.  Operational Considerations
+   There are multiple stakeholders involved in onboarding a device in
+   the typical LPWAN eco-system.  The stakeholders range from device
+   manufacturers to device owners to the network service provider to the
+   application service provider.
 
-6.  IANA Considerations
+   In LoRa, the device is called "generic device", when the device is
+   configured with the parameters such as DevEUI (IEEE EUI64 identifier
+   which uniquely identifies the device), the JoinEUI (IEEE EUI64
+   identifier which uniquely identifies the application server) and the
+   cryptographic keys for securing the communication.
 
-7.  Acknowledgements
+3.  Terminology
 
-8.  Normative References
+4.  IPv6 address fields
+
+   As in 6LoWPAN [RFC4944], IPv6 addresses are split into two 64-bit
+   long fields; one for the prefix and one for the Interface Identifier
+   (IID).  These fields SHOULD be compressed.  To allow for a single
+
+
+
+Balakrichenan             Expires June 14, 2019                 [Page 2]
+
+Internet-Draft             DNS usage in LPWAN              December 2018
+
+
+   Rule being used for both directions, these values are identified by
+   their role (DEV or APP) and not by their position in the header
+   (source or destination).
+
+5.  Different types of Interface Identifiers (IID)
+
+   In LoRaWAN, there are different types of identifiers : DevEUI,
+   JoinEUI, AppEUI.  All these information are sent as part of the
+   packet header.
+
+6.  Security Considerations
+
+7.  Privacy Considerations
+
+8.  Operational Considerations
+
+9.  IANA Considerations
+
+10.  Acknowledgements
+
+11.  Normative References
 
    [RFC8376]  Farrell, S., Ed., "Low-Power Wide Area Network (LPWAN)
               Overview", RFC 8376, DOI 10.17487/RFC8376, May 2018,
               <https://www.rfc-editor.org/info/rfc8376>.
 
-Authors' Addresses
+   [RFC0830]  Su, Z., "Distributed system for Internet name service",
+              RFC 830, DOI 10.17487/RFC0830, October 1982,
+              <https://www.rfc-editor.org/info/rfc830>.
+
+Author's Address
 
    Sandoche Balakrichenan (editor)
    AFNIC
@@ -109,14 +158,6 @@ Authors' Addresses
 
 
 
-Balakrichenan & SivalingamExpires May 10, 2019                  [Page 2]
-
-Internet-Draft               Naming for SCHC               November 2018
-
-
-   Sothy (editor)
-   Acklio
-   t
 
 
 
@@ -124,45 +165,4 @@ Internet-Draft               Naming for SCHC               November 2018
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Balakrichenan & SivalingamExpires May 10, 2019                  [Page 3]
+Balakrichenan             Expires June 14, 2019                 [Page 3]

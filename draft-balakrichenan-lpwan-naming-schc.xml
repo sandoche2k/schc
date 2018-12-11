@@ -8,8 +8,8 @@
 <?rfc inline="yes" ?>
 <rfc category="exp" ipr="trust200902" docName="draft-balakrichenan-lpwan-naming-schc-00">
 <front>
-   <title abbrev="Naming for SCHC">
-     Naming for SCHC 
+   <title abbrev="DNS usage in LPWAN">
+     DNS usage in LPWAN
    </title>
 
    <author role="editor" fullname="Sandoche Balakrichenan" initials="S." surname="Balakrichenan">
@@ -27,21 +27,6 @@
      </address>
    </author>
 
-   <author role="editor" fullname="Sothy" initials="S." surname="Sivalingam">
-     <organization>Acklio</organization>
-     <address>
-       <postal>
-         <street>t</street>
-         <city></city>
-         <region></region>
-         <code></code>
-         <country></country>
-       </postal>
-       <phone></phone>
-       <email></email>
-     </address>
-   </author>
-
    <date year="2018" />
    <area>Internet Area</area>
    <workgroup>lpwan</workgroup>
@@ -49,25 +34,67 @@
 
    <abstract>
      <t>
-       This document describes how a DNS label could be send using SCHC
-       SCHC for DNS.
+       This document describes DNS usage in LPWAN.
      </t>
    </abstract>
 </front>
 
 <middle>
    <section title="Introduction">
-     <t> <xref target="RFC8376"/>  states that the goal of
-   the LPWAN WG is to, where necessary, adapt IETF-defined protocols,
-   addressing schemes, and naming conventions to this particular
-   constrained environment.
+	<t> 
+	<xref target="RFC8376"/>  states that the goal of
+	the LPWAN WG is to, where necessary, adapt IETF-defined protocols,
+   	addressing schemes, and naming conventions to this particular
+   	constrained environment. 
+	</t>
 
-   This draft is intended for the naming part.
-     </t>
+     	<t> 
+	<xref target="RFC0830"/>  specifies that realization of Internet Naming
+	Convention requires the establishment of both naming authority and name service.
+     	</t>
+
+	<t> 
+	This document describes how the Internet naming convention, i.e. the
+	domain names and the Internet naming authority and service, i.e. the DNS could
+	be use in LPWAN constrained scenarios.  
+	</t>
+ </section>
+  
+  <section title="Motivation"> 
+      	<t>
+	There are multiple stakeholders involved in onboarding a device in the typical
+	LPWAN eco-system. The stakeholders range from device manufacturers to device
+	owners to the network service provider to the application service provider. 
+	</t>
+
+	<t>
+	In LoRa, the device is called "generic device", when the device is configured
+	with the parameters such as DevEUI (IEEE EUI64 identifier which uniquely
+	identifies the device), the JoinEUI (IEEE EUI64 identifier which uniquely
+	identifies the application server) and the cryptographic keys for securing the
+	communication.  
+	</t>
    </section>
 
    <section title="Terminology">
      <t> </t> 
+   </section>
+   
+   <section title="IPv6 address fields">
+     	<t>  
+	As in 6LoWPAN [RFC4944], IPv6 addresses are split into two 64-bit long
+	fields; one for the prefix and one for the Interface Identifier (IID).  These
+	fields SHOULD be compressed.  To allow for a single Rule being used for both
+	directions, these values are identified by their role (DEV or APP) and not by
+	their position in the header (source or destination).
+	</t>
+   </section>
+
+   <section title="Different types of Interface Identifiers (IID)">
+     	<t>
+	 In LoRaWAN, there are different types of identifiers : DevEUI, JoinEUI,
+	AppEUI. All these information are sent as part of the packet header.  
+	</t>
    </section>
 
 
@@ -91,6 +118,7 @@
 <back>
 <references title="Normative References">
    <?rfc include='reference.RFC.8376'?>
+   <?rfc include='reference.RFC.0830'?>
 </references>
 
 
